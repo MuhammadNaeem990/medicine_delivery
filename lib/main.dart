@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:medicine_delivery/home/main_food_page.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
+    statusBarColor: Colors
+        .white, // yaha pe aap apne pasandeeda rang ka chunav kar sakte hain
+  ));
   runApp(const MyApp());
 }
 

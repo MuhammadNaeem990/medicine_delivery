@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:medicine_delivery/utils/colors.dart';
+import 'package:medicine_delivery/widgets/big_text.dart';
+import 'package:medicine_delivery/widgets/small_text.dart';
+
+import 'food_page_body.dart';
 
 class MainFoodPage extends StatefulWidget {
   const MainFoodPage({Key? key}) : super(key: key);
@@ -23,8 +27,14 @@ class _MainFoodPageState extends State<MainFoodPage> {
               children: [
                 Column(
                   children: [
-                    Text("Country"),
-                    Text("City"),
+                    BigText(
+                        text: "Pakistan", color: AppColors.mainColor, size: 20),
+                    Row(
+                      children: [
+                        SmallText(text: "Karachi", color: Colors.black54),
+                        Icon(Icons.arrow_drop_down_rounded)
+                      ],
+                    )
                   ],
                 ),
                 Center(
@@ -45,6 +55,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
             ),
           ),
         ),
+        FoodPageBody(),
       ],
     ));
   }
